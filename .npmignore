@@ -1,0 +1,9 @@
+.*
+*.config.js
+tsconfig.*
+test
+public
+print
+src
+env.d.tsconfig
+index.html

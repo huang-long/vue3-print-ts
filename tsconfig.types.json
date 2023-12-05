@@ -1,0 +1,10 @@
+{
+  "include": ["print/**/*"],
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "lib": ["es2015"],
+    "declaration": true, /* 生成相关的 '.d.ts' 文件。 */ 
+    "declarationDir": "./lib/types", /* '.d.ts' 文件输出目录 */ 
+    "emitDeclarationOnly": true, /* 只生成声明文件，不生成 js 文件*/
+  }
+}
