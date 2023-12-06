@@ -22,7 +22,8 @@ app.directive("print", Print);
 ```javascript
 // 页面中使用
 <script setup lang="ts">
-const printObj = ref({
+import type { PrintConf } from 'vue3-print-ts';
+const printObj = ref<PrintConf>({
   ids: ["printMe"],
   printTitle: "打印标题",
   extraHead: '<meta http-equiv="Content-Language"content="zh-cn"/>',
