@@ -1,6 +1,6 @@
 # vue-print-ts
 
-vue3 print typescript, this package for vue3.3.*.
+vue3 print typescript, this package for vue3.2.*.
 
 ## install vue-print-ts 
 
