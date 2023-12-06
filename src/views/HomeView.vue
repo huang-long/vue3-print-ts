@@ -2,12 +2,20 @@
 import { nextTick, onMounted, ref } from 'vue';
 import * as echarts from "echarts";
 import QRCode from 'easyqrcodejs';
+import type { PrintConf } from '../../print';
 
 const config = ref(true);
-const printObj = ref({
+const printObj = ref<PrintConf>({
   ids: ["printMe"],
   printTitle: "打印标题",
   extraHead: '<meta http-equiv="Content-Language"content="zh-cn"/>',
+  showBackground: true,
+  beforePrint() {
+    console.log('打印之前')
+  },
+  afterPrint() {
+    console.log('打印之后')
+  }
 })
 
 let echartMain = ref();
@@ -17,7 +25,7 @@ const init = () => {
     text: "打印测试",
     width: 100,
     height: 100,
-    quietZone: 10,
+    quietZone: 10
   };
   new QRCode(qrCode.value, options);
 

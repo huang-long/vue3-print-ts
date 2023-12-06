@@ -89,11 +89,12 @@ export default class PrintWin {
      */
     addEvent(win: Window | null) {
         win?.addEventListener("beforeprint", (event) => {
-            this.settings.beforePrint && this.settings.beforePrint()
+            this.settings.beforePrint && this.settings.beforePrint();
             console.debug("beforeprint", event)
         });
 
         win?.addEventListener("afterprint", (event) => {
+            this.settings.afterPrint && this.settings.afterPrint();
             console.debug("afterprint", event);
         });
     }
@@ -172,8 +173,8 @@ export default class PrintWin {
         }
 
         // 启用背景颜色 webkit为Google Chrome、Safari等浏览器内核
-        if (!this.settings.showBackground) {
-            style = `<style type="text/css" media="print,screen">div{-webkit-print-color-adjust: exact;}</style>`;
+        if (this.settings.showBackground) {
+            style += `<style type="text/css" media="print,screen">div{-webkit-print-color-adjust: exact;}</style>`;
         }
         return `<head><title>${this.settings.printTitle}</title>${extraHead}${links}${style}</head>`;
     }

@@ -1,5 +1,5 @@
-import Print from './print/print';
-import type { PrintConf as conf } from './print/printarea';
+import Print from './printDirective/print';
+import type { PrintConf as conf } from './printDirective/printarea';
 /**
  * 打印页面配置对象 PrintConf
  * @param ids ?: string | string[]; // 局部打印的id 不传打印整个页面

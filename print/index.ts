@@ -1,5 +1,5 @@
-import Print from './print/print';
-import type { PrintConf as conf } from './print/printarea';
+import Print from './printDirective/print';
+import type { PrintConf as conf } from './printDirective/printarea';
 
 // Print.install = function(Vue) {
 //     Vue.directive('print', Print);

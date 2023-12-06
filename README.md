@@ -1,6 +1,6 @@
 # vue-print-ts
 
-vue3 print typescript.
+vue3 print typescript, this package for vue3.3.*.
 
 ## install vue-print-ts 
 
@@ -22,7 +22,8 @@ app.directive("print", Print);
 ```javascript
 // 页面中使用
 <script setup lang="ts">
-const printObj = ref({
+import type { PrintConf } from 'vue3-print-ts';
+const printObj = ref<PrintConf>({
   ids: ["printMe"],
   printTitle: "打印标题",
   extraHead: '<meta http-equiv="Content-Language"content="zh-cn"/>',
@@ -42,15 +43,15 @@ const printObj = ref({
 全局打印
 v-print
 
-局部打印，一下参数局部打印有效
+局部打印，下面参数局部打印有效
 v-print="PrintConf" 
 
 | Parame                    | Explain                                                                        | Type              | OptionalValue         | DefaultValue |
 | ------------------------- | ------------------------------------------------------------------------------ | ----------------- | --------------------- | ------------ |
 | ids                       | Range print ID ,required value                                                 | String|String[]   | —                     | —            |
 | standard                  | Document type                                                                  | String|String[]   | html5/loose/strict    | html5        |
-| extraHead                 | `<head></head>`Add DOM nodes in the node, example: <meta charset="UTF-8">      | String|String[]   | —                     | —            |
-| extraCss                  | `<link>` New CSS style sheet, example: http://www.**.com/aa.css                | String            | —                     | -            |
+| extraHead                 | `<head></head>`Add DOM nodes in the node, example: `<meta charset="UTF-8">`    | String|String[]   | —                     | —            |
+| extraCss                  | `<link>` New CSS style sheet, example: `http://www.**.com/aa.css`              | String            | —                     | -            |
 | printTitle                | `<title></title>` Content of label                                             | String            | —                     | -            |
 | beforePrint               | Callback function before calling printing tool, example: calback(event)        | VoidFunction      | —                     | -            |
 | afterPrint                | Callback function after calling printing tool, example: calback(event)         | VoidFunction      | —                     | -            |

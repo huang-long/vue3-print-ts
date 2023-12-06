@@ -1,9 +1,12 @@
 .*
+env.d.ts
 *.config.js
+*.config.ts
 tsconfig.*
 test
-public
-print
-src
+/public
+/print
+/src
+/dist
 env.d.tsconfig
 index.html
