@@ -1,6 +1,6 @@
 {
   "name": "vue3-print-ts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "vue3 print.",
   "module": "lib/index.esm.min.js",
   "main": "lib/index.cjs.min.js",
@@ -35,7 +35,7 @@
     "easyqrcodejs": "^4.6.0",
     "echarts": "^5.4.3",
     "pinia": "^2.1.4",
-    "vue": "^3.2.47",
+    "vue": "~3.2.47",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
