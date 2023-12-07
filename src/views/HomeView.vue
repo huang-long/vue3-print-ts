@@ -4,7 +4,6 @@ import * as echarts from "echarts";
 import QRCode from 'easyqrcodejs';
 import type { PrintConf } from '../../print';
 
-const config = ref(true);
 const printObj = ref<PrintConf>({
   ids: ["printMe"],
   printTitle: "打印标题",
@@ -57,7 +56,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="config">
+  <div>
     <button v-print="printObj">打印</button>
     <div id="printMe" style="background: #dac9c9">
       <div ref="echartMain" :style="{ width: '300px', height: '300px' }"></div>
@@ -87,8 +86,9 @@ onMounted(() => {
   </div>
 </template>
 <style type="text/css" media="print,screen">
-div {
+body.body-print-bkg {
   /* webkit 为Google Chrome、Safari等浏览器内核 */
+  print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
 }
 
