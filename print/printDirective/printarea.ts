@@ -174,7 +174,7 @@ export default class PrintWin {
 
         // 启用背景颜色 webkit为Google Chrome、Safari等浏览器内核
         if (this.settings.showBackground) {
-            style += `<style type="text/css" media="print,screen">div{-webkit-print-color-adjust: exact;}</style>`;
+            style += `<style type="text/css" media="print,screen">body{print-color-adjust: exact;-webkit-print-color-adjust: exact;}</style>`;
         }
         return `<head><title>${this.settings.printTitle}</title>${extraHead}${links}${style}</head>`;
     }
