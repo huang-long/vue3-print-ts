@@ -43,7 +43,7 @@ const printObj = ref<PrintConf>({
 全局打印
 v-print
 
-局部打印，下面参数局部打印有效
+局部打印，PrintConf参数局部打印有效
 v-print="PrintConf" 
 
 | Parame                    | Explain                                                                        | Type              | OptionalValue         | DefaultValue |
