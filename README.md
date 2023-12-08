@@ -48,9 +48,9 @@ v-print="PrintConf"
 
 | Parame                    | Explain                                                                        | Type              | OptionalValue         | DefaultValue |
 | ------------------------- | ------------------------------------------------------------------------------ | ----------------- | --------------------- | ------------ |
-| ids                       | Range print ID ,required value                                                 | String|String[]   | —                     | —            |
-| standard                  | Document type                                                                  | String|String[]   | html5/loose/strict    | html5        |
-| extraHead                 | `<head></head>`Add DOM nodes in the node, example: `<meta charset="UTF-8">`    | String|String[]   | —                     | —            |
+| ids                       | Range print ID ,required value                                                 | String`|`String[] | —                     | —            |
+| standard                  | Document type                                                                  | String`|`String[] | html5/loose/strict    | html5        |
+| extraHead                 | `<head></head>`Add DOM nodes in the node, example: `<meta charset="UTF-8">`    | String`|`String[] | —                     | —            |
 | extraCss                  | `<link>` New CSS style sheet, example: `http://www.**.com/aa.css`              | String            | —                     | -            |
 | printTitle                | `<title></title>` Content of label                                             | String            | —                     | -            |
 | beforePrint               | Callback function before calling printing tool, example: calback(event)        | VoidFunction      | —                     | -            |
