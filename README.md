@@ -55,7 +55,7 @@ v-print="PrintConf"
 | printTitle                | `<title></title>` Content of label                                             | String            | —                     | -            |
 | beforePrint               | Callback function before calling printing tool, example: calback(event)        | VoidFunction      | —                     | -            |
 | afterPrint                | Callback function after calling printing tool, example: calback(event)         | VoidFunction      | —                     | -            |
-| showBackground            | print page show background style                                               | Boolean           | —                     | false        |
+| showBackground            | print page show background style                                               | Boolean           | —                     | true         |
 
 
 ## Project Setup
